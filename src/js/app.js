@@ -2,5 +2,6 @@
 angular
   .module('duckFacts', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'angular-jwt'
   ]);
