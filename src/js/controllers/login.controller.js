@@ -14,7 +14,7 @@ function LoginCtrl(User, CurrentUserService, $state) {
       .then(data => {
         console.log('LOGGED IN: ', data.message);
         CurrentUserService.getUser();
-        $state.go('widgetsIndex');
+        $state.go('home');
       }, err => {
         console.log('ERROR: ',err);
       });

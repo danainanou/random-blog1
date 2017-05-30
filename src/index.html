@@ -10,7 +10,12 @@
     <!-- endinject -->
   </head>
   <body ng-controller="MainCtrl as main">
-    {{ main.all }}
-    {{ 1 + 1 }}
+    <header>
+      <nav>
+        <a href="" ui-sref="login">Login</a>
+        <a href="" ng-click="main.logout()">Logout</a>
+      </nav>
+    </header>
+    <main ui-view></main>
   </body>
 </html>
