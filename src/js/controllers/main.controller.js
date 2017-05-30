@@ -2,11 +2,11 @@ angular
   .module('duckFacts')
   .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$http'];
-function MainCtrl($http) {
+MainCtrl.$inject = ['$http', 'API'];
+function MainCtrl($http, API) {
   const vm = this;
   $http
-    .get('http://localhost:3000/api/users')
+    .get(`${API}/users`)
     .then(response => {
       vm.all = response.data;
     });
